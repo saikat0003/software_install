@@ -1,0 +1,59 @@
+# Installing GetContacts
+
+Here are the steps to install GetContacts using Conda:
+
+1.  **Create a Conda environment:**
+
+    ```bash
+    conda create -n getcontact python=2.7
+    ```
+
+    * This command creates a new Conda environment named "getcontact" with Python 2.7.  GetContacts has some dependencies that are easier to manage with Python 2.7.
+
+2.  **Activate the Conda environment:**
+
+    ```bash
+    conda activate getcontact
+    ```
+
+    * This command activates the "getcontact" environment, so that subsequent packages are installed within this isolated environment. This helps to avoid conflicts with other Python installations or packages.
+
+3.  **Install required packages:**
+
+    ```bash
+    conda install scipy numpy scikit-learn matplotlib pandas cython
+    conda install conda-forge/label/cf202003::vmd-python
+    ```
+
+    * This installs several essential scientific computing packages:
+        * `scipy`: For scientific computing functions.
+        * `numpy`: For numerical operations (arrays, etc.).
+        * `scikit-learn`: For machine learning algorithms.
+        * `matplotlib`: For plotting and visualization.
+        * `pandas`: For data analysis and manipulation.
+        * `cython`: For writing C extensions for Python.
+        * `vmd-python`: Visual Molecular Dynamics (VMD) Python bindings.  The `conda-forge/label/cf202003::` part specifies a specific build from the conda-forge channel.
+
+4.  **Clone the GetContacts repository:**
+
+    ```bash
+    git clone [https://github.com/getcontacts/getcontacts.git](https://github.com/getcontacts/getcontacts.git)
+    ```
+
+    * This command clones the GetContacts code from its GitHub repository into a new directory named "getcontacts".
+
+5.  **Change directory to the GetContacts folder:**
+
+    ```bash
+    cd getcontacts
+    ```
+
+    * This command changes the current directory to the "getcontacts" directory, where the GetContacts scripts are located.
+
+6.  **Make the Python scripts executable:**
+
+    ```bash
+    chmod +x *.py
+    ```
+
+    * This command adds execute permissions to all files ending with ".py" (Python scripts) in the current directory. This is necessary to run the GetContacts scripts from the command line.
